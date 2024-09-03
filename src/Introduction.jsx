@@ -15,11 +15,15 @@ const Introduction = () => {
       <div className="blurb-container">
         <div className="speech-bubble">
           <p>
-            Hi, I'm <bold>Shiv Desai</bold>. I'm a junior engineer and a senior at Emory University getting a B.S. in Computer Science. Thank you for visiting my webpage and I would love for you to get me to know me better!
+            Hi, I'm <strong>Shiv Desai</strong>. I'm a junior software engineer and a senior at Emory University getting a B.S. in Computer Science. Thank you for visiting my webpage and I would love for you to get me to know me better!
           </p>
         </div>
-        <button className="see-more-button" onClick={handleScroll}>
-          See More
+        <button 
+            className="see-more-button" 
+            onClick={handleScroll}
+            aria-label="Scroll to the next section"
+            >
+            See More
         </button>
       </div>
     </div>
