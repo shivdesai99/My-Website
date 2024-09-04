@@ -4,7 +4,7 @@ import ProfessionalPhoto from './assets/ProfessionalPhoto.jpg';
 
 const Introduction = () => {
   const handleScroll = () => {
-    document.getElementById('next-section').scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('about-me').scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
