@@ -1,7 +1,9 @@
 // App.jsx
 import React from 'react';
 import Introduction from './Introduction';
-import './Navbar.css'; // Import the CSS for the Navbar
+import InterviewPrep from './InterviewPrep';
+import './Navbar.css';
+import './global.css';
 
 const App = () => {
   return (
@@ -18,12 +20,13 @@ const App = () => {
         <Introduction />
       </section>
 
-      <section id="about-me" style={{ height: '100vh', backgroundColor: '#e0e0e0' }}>
+      <section id="about-me" style={{ height: '100vh' }}>
         <h1>About Me</h1>
+        <InterviewPrep />
         {/* Content for About Me section */}
       </section>
 
-      <section id="projects" style={{ height: '100vh', backgroundColor: '#d3d3d3' }}>
+      <section id="projects" style={{ height: '100vh' }}>
         <h1>Projects</h1>
         {/* Content for Projects section */}
       </section>
