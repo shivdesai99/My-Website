@@ -1,37 +1,84 @@
 .navbar {
-    position: fixed;
-    top: 0;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    background-color: #333;
-    padding: 10px 0;
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: gray;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.menu-items li {
+  margin: 0 20px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #007bff;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px; /* Adds space between the icons and the right wall */
+}
+
+.social-icons li {
+  margin-left: 20px;
+}
+
+.navbar ul li img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.navbar ul li img:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      padding: 10px;
   }
-  
-  .navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+
+  .menu-items {
+      justify-content: center;
+      margin-bottom: 10px;
   }
-  
+
+  .menu-items, .social-icons {
+      flex-direction: column;
+  }
+
   .navbar ul li {
-    margin: 0 20px;
+      margin: 10px 0;
   }
-  
-  .navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar ul li a:hover {
-    color: #007bff;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
