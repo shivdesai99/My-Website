@@ -42,7 +42,6 @@
 .social-icons {
   display: flex;
   justify-content: flex-end;
-  margin-right: 20px; /* Adds space between the icons and the right wall */
 }
 
 .social-icons li {
