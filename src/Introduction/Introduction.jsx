@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Introduction.css';
 import ProfessionalPhoto from './../assets/ProfessionalPhoto.jpg';
 import Arrow from './../assets/down-arrow.png';
+import BackgroundVideo from './../assets/background.mp4';
 
 const Introduction = () => {
 
