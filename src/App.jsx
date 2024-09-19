@@ -1,6 +1,4 @@
-import React from 'react';
-import Introduction from './Introduction/Introduction';
-import IntroductionTwo  from './Introduction/IntroductionTwo';
+import Introduction  from './Introduction/Introduction';
 import AboutMe from './AboutMe/AboutMe';
 import NavBar from './NavBar/NavBar';
 import Experience from './Experience/Experience';
@@ -13,7 +11,7 @@ const App = () => {
       {/* <NavBar /> */}
       <section id="home">
         {/* <Introduction /> */}
-        <IntroductionTwo />
+        <Introduction />
       </section>
 
       <section id="about-me" style={{ height: '100vh' }}>
