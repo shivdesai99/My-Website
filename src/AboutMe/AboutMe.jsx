@@ -6,7 +6,7 @@ import FaGithub from './../assets/github.png';
 import FaLinkedin from './../assets/linkedin.png';
 import FaGmail from './../assets/gmail.png';
 import FaResume from './../assets/resume.png';
-import myResume from './../assets/myresume.pdf';
+import resume from './../assets/myresume.pdf';
 
 const AboutMe = () => {
     const handleIconClick = (url) => {
@@ -14,15 +14,16 @@ const AboutMe = () => {
     };
 
     const handleResumeClick = () => {
-        window.open(myResume, '_blank');
+        window.open(resume, '_blank');
     };
 
     const handleGmailClick = () => {
-        window.location.href = 'mailto:your.email@example.com';
+        window.location.href = 'mailto:shiv.desai2@emory.edu';
     };
 
     return (
         <div className="about-me-container">
+            <h1>About Me</h1>
             <div className="content-wrapper">
                 <div className="profile-section">
                     <div className="photo-container">
@@ -64,7 +65,6 @@ const AboutMe = () => {
                     </div>
                 </div>
                 <div className="info-section">
-                    <h1>About Me</h1>
                     <div className="info-boxes">
                         <div className="info-box">
                             <h2>Background</h2>
