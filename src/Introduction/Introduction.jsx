@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import './Introduction.css';
 import Arrow from './../assets/white-arrow.png';
-import BackgroundVideo from './../assets/backgroundstar.mp4';
+import BackgroundVideo from './../assets/backgrounddots.mp4';
 
-const words = ['software engineer', 'fitness enthusiast', 'web developer', 'golfer', 'bookworm'];
+const words = ['software engineer', 'golfer', 'web developer', 'student', 'problem solver'];
 
 const Introduction = () => {
   const [displayedText, setDisplayedText] = useState('');
@@ -61,7 +61,7 @@ const Introduction = () => {
 
       <div className="content">
         <h1 className="static-name">
-          I'm Shiv Desai
+          Shiv Desai
         </h1>
         <h2 className="typed-text">
           a <span className="dynamic-text">{displayedText}</span>
