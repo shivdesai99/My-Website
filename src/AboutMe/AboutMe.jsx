@@ -69,7 +69,7 @@ const AboutMe = () => {
                         <div className="info-box">
                             <h2>Background</h2>
                             <p>
-                                I am a senior at Emory University pursuing a B.S. in Computer Science. After my freshman year, I transferred from Indiana University’s Kelley School of Business to Emory to follow my passion for coding. I have maintained a competitive GPA and consistently made the Dean’s List, all while catching up on credits to graduate on time, as I began the degree in my sophomore year.
+                                Hi! I am a senior at <a href="https://www.emory.edu/home/index.html"> Emory University</a>, studying Computer Science, and set to graduate in May 2025. I'm from West Windsor, NJ, and I am looking at New Grad SWE roles for 2025!
                             </p>
                         </div>
                         <div className="info-box">

@@ -18,7 +18,6 @@
   object-fit: cover;
 }
 
-
 .content {
   position: absolute;
   top: 40%;
@@ -29,15 +28,26 @@
   color: white;
 }
 
+.static-name {
+  font-size: 80px;
+  font-family: 'Brush Script MT', cursive;
+  margin: 0;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
 .typed-text {
-  font-size: 70px;
+  font-size: 50px;
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 4px solid white;
-  animation: blink-caret 0.75s step-end infinite;
   font-family: 'Roboto', sans-serif;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+.dynamic-text {
+  border-right: 4px solid white;
+  animation: blink-caret 0.75s step-end infinite;
 }
 
 @keyframes blink-caret {
@@ -47,7 +57,7 @@
 
 .scroll-indicator {
   position: absolute;
-  bottom: 20px;
+  bottom: 65px;
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
@@ -62,8 +72,8 @@
 }
 
 .down-arrow {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   animation: bounce 2s infinite;
 }
 
@@ -80,8 +90,16 @@
 }
 
 @media (max-width: 768px) {
+  .static-name {
+    font-size: 50px;
+  }
+
   .typed-text {
-    font-size: 40px;
+    font-size: 30px;
+    margin-top: 15px;
+  }
+
+  .dynamic-text {
     border-right: 2px solid white;
   }
 

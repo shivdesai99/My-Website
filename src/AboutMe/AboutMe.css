@@ -1,21 +1,23 @@
 .about-me-container {
-  background-color: #bfb8b8;
+  background-color: #747474;
   min-height: 100vh;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 4rem;
 }
 
 .content-wrapper {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  gap: 50px;
   width: 100%;
+  gap: 20px;
   max-width: 1200px;
+  min-height: 650px;
 }
 
 .profile-section {
@@ -32,15 +34,22 @@
 }
 
 .profile-photo {
-  width: 425px;
-  height: 425px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  border: 5px solid black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .info-section {
-  flex: 0 0 50%; /* Ensures info-section takes up 50% */
+  flex: 0 0 40%;
   text-align: center;
 }
 
@@ -50,10 +59,11 @@
   color: #ffffff;
 }
 
+/* Info Box Modifications */
 .info-boxes {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .info-box {
@@ -62,24 +72,34 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 100%;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Hide content overflow */
+  max-height: 40px; /* Initially show only the title */
+  transition: max-height .9s ease, transform 1s ease, box-shadow 0.8s ease; /* Slow down the expansion */
+  cursor: pointer; /* Makes the box clickable */;
 }
 
 .info-box h2 {
   font-size: 24px;
   color: #007bff;
-  margin-bottom: 15px;
+  margin-bottom: 0; /* Remove bottom margin to keep it compact */
+  text-align: center; /* Ensure the title is centered */
 }
 
 .info-box p {
-  font-size: 16px;
-  color: #666;
-  line-height: 1.6;
+  font-size: 17px;
+  color: #000000;
+  line-height: 1.2;
+  opacity: 0; /* Initially hide the text */
+  transition: opacity 0.5s ease; /* Smooth transition for text reveal */
 }
 
 .info-box:hover {
-  transform: translateY(-10px);
+  max-height: 400px; /* Expands the box to show content */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.info-box:hover p {
+  opacity: 1; /* Reveal the text on hover */
 }
 
 .social-icons {
@@ -89,8 +109,8 @@
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 75px;
+  height: 75px;
   cursor: pointer;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }

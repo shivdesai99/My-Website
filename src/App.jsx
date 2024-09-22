@@ -8,7 +8,7 @@ import './global.css';
 const App = () => {
   return (
     <div>
-      {/* <NavBar /> */}
+      <NavBar />
       <section id="home">
         {/* <Introduction /> */}
         <Introduction />

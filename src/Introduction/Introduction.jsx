@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 import './Introduction.css';
 import Arrow from './../assets/white-arrow.png';
-import BackgroundVideo from './../assets/backgroundwave.mp4';
+import BackgroundVideo from './../assets/backgroundstar.mp4';
+
+const words = ['software engineer', 'fitness enthusiast', 'web developer', 'golfer', 'bookworm'];
 
 const Introduction = () => {
   const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(100);
-
-  const words = ['Welcome...', 'Shiv Desai'];
 
   useEffect(() => {
     const handleTyping = () => {
@@ -20,21 +20,24 @@ const Introduction = () => {
 
       setDisplayedText(updatedText);
 
-      setTypingSpeed(isDeleting ? 50 : 100);
+      let newTypingSpeed = isDeleting ? 50 : 85;
 
       if (!isDeleting && updatedText === currentWord) {
-        setTimeout(() => setIsDeleting(true), 3500);
-      }
-      else if (isDeleting && updatedText === '') {
+        newTypingSpeed = 3500;
+        setIsDeleting(true);
+      } else if (isDeleting && updatedText === '') {
+        newTypingSpeed = 500;
         setIsDeleting(false);
         setCurrentWordIndex((prev) => (prev + 1) % words.length);
       }
+
+      setTypingSpeed(newTypingSpeed);
     };
 
     const timer = setTimeout(handleTyping, typingSpeed);
 
     return () => clearTimeout(timer);
-  }, [displayedText, isDeleting, typingSpeed, currentWordIndex, words]);
+  }, [displayedText, isDeleting, typingSpeed, currentWordIndex]);
 
   const scrollToNextSection = () => {
     const nextSection = document.querySelector('#about-me');
@@ -57,11 +60,13 @@ const Introduction = () => {
       </video>
 
       <div className="content">
-        <h1 className="typed-text">
-          {displayedText}
+        <h1 className="static-name">
+          I'm Shiv Desai
         </h1>
+        <h2 className="typed-text">
+          a <span className="dynamic-text">{displayedText}</span>
+        </h2>
       </div>
-
       <div className="scroll-indicator" onClick={scrollToNextSection} aria-label="Scroll to About Me section">
         <img src={Arrow} alt="Down Arrow" className="down-arrow" />
       </div>
