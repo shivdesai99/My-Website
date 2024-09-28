@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   width: 100%; 
-  padding: 10px 20px; /* Reduced padding for smaller height */
+  padding: 10px 20px;
   background-color: rgba(0, 0, 0, 0.8); /* Slight background color for visibility */
   margin: 0 auto;
   z-index: 1000;
@@ -75,7 +75,7 @@
   }
 
   .navbar ul li a {
-    font-size: 20px; /* Larger font size for mobile readability */
+    font-size: 20px;
   }
 }
 

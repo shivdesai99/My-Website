@@ -1,5 +1,5 @@
 .about-me-container {
-  background-color: #747474;
+  background-color: rgb(96, 144, 144);
   min-height: 100vh;
   color: #ffffff;
   display: flex;
@@ -80,7 +80,7 @@
 
 .info-box h2 {
   font-size: 24px;
-  color: #007bff;
+  color: rgb(0, 0, 0);
   margin-bottom: 0; /* Remove bottom margin to keep it compact */
   text-align: center; /* Ensure the title is centered */
 }

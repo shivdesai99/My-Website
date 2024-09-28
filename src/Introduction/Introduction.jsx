@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import './Introduction.css';
 import Arrow from './../assets/white-arrow.png';
-import BackgroundVideo from './../assets/backgrounddots.mp4';
 
-const words = ['software engineer', 'golfer', 'web developer', 'student', 'problem solver'];
+const words = ['software engineer', 'web developer', 'student', 'problem solver'];
 
 const Introduction = () => {
   const [displayedText, setDisplayedText] = useState('');
@@ -48,17 +47,6 @@ const Introduction = () => {
 
   return (
     <div className="introduction">
-      <video
-        className="background-video"
-        src={BackgroundVideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        Your browser does not support the video tag.
-      </video>
-
       <div className="content">
         <h1 className="static-name">
           Shiv Desai
